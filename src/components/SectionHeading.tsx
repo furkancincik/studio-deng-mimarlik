@@ -7,9 +7,10 @@ interface SectionHeadingProps {
   subtitle?: string;
   align?: "left" | "center";
   children?: ReactNode;
+  large?: boolean;
 }
 
-const SectionHeading = ({ label, title, subtitle, align = "left", children }: SectionHeadingProps) => {
+const SectionHeading = ({ label, title, subtitle, align = "left", children, large = false }: SectionHeadingProps) => {
   const alignment = align === "center" ? "text-center items-center" : "text-left items-start";
 
   return (
@@ -18,15 +19,21 @@ const SectionHeading = ({ label, title, subtitle, align = "left", children }: Se
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.6 }}
-      className={`flex flex-col gap-3 mb-12 md:mb-16 ${alignment}`}
+      className={`flex flex-col gap-4 mb-14 md:mb-20 ${alignment}`}
     >
       {label && (
-        <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-sans font-medium">
+        <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display font-medium">
           {label}
         </span>
       )}
       {title ? (
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium tracking-tight text-foreground leading-tight">
+        <h2
+          className={`font-serif font-medium tracking-tight text-foreground leading-[1.1] ${
+            large
+              ? "text-4xl md:text-5xl lg:text-6xl"
+              : "text-3xl md:text-4xl lg:text-5xl"
+          }`}
+        >
           {title}
         </h2>
       ) : (
