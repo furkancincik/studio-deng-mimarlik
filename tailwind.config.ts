@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         serif: ["'Playfair Display'", "Georgia", "serif"],
         sans: ["'DM Sans'", "system-ui", "sans-serif"],
+        display: ["'Space Grotesk'", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -58,6 +59,8 @@ export default {
           cream: "hsl(var(--cream))",
         },
         anthracite: "hsl(var(--anthracite))",
+        gold: "hsl(var(--gold))",
+        charcoal: "hsl(var(--charcoal))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -91,12 +94,22 @@ export default {
           from: { opacity: "0", transform: "translateX(-40px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
+        "draw-line": {
+          from: { width: "0" },
+          to: { width: "80px" },
+        },
+        "counter": {
+          from: { opacity: "0", transform: "translateY(10px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.6s ease-out forwards",
         "slide-in-left": "slide-in-left 0.6s ease-out forwards",
+        "draw-line": "draw-line 0.8s ease-out forwards",
+        "counter": "counter 0.4s ease-out forwards",
       },
     },
   },

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,43 +7,46 @@
 @layer base {
   :root {
     --background: 40 20% 98%;
-    --foreground: 0 0% 15%;
+    --foreground: 0 0% 12%;
 
     --card: 40 15% 96%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 0 0% 12%;
 
     --popover: 40 20% 98%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 0 0% 12%;
 
-    --primary: 0 0% 17%;
+    --primary: 0 0% 12%;
     --primary-foreground: 40 20% 98%;
 
     --secondary: 35 18% 93%;
-    --secondary-foreground: 0 0% 17%;
+    --secondary-foreground: 0 0% 12%;
 
     --muted: 35 12% 92%;
     --muted-foreground: 0 0% 45%;
 
     --accent: 35 25% 90%;
-    --accent-foreground: 0 0% 17%;
+    --accent-foreground: 0 0% 12%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 35 15% 88%;
     --input: 35 15% 88%;
-    --ring: 0 0% 17%;
+    --ring: 0 0% 12%;
 
     --radius: 0.25rem;
 
     --warm-beige: 35 30% 95%;
     --warm-stone: 30 10% 82%;
-    --anthracite: 0 0% 17%;
+    --anthracite: 0 0% 12%;
     --sand: 38 25% 88%;
     --cream: 40 33% 97%;
+    --gold: 38 60% 52%;
+    --charcoal: 0 0% 20%;
 
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -56,25 +59,27 @@
   }
 
   .dark {
-    --background: 0 0% 8%;
+    --background: 0 0% 6%;
     --foreground: 40 20% 95%;
-    --card: 0 0% 11%;
+    --card: 0 0% 9%;
     --card-foreground: 40 20% 95%;
-    --popover: 0 0% 8%;
+    --popover: 0 0% 6%;
     --popover-foreground: 40 20% 95%;
     --primary: 40 20% 95%;
-    --primary-foreground: 0 0% 8%;
-    --secondary: 0 0% 15%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 12%;
     --secondary-foreground: 40 20% 95%;
-    --muted: 0 0% 15%;
+    --muted: 0 0% 12%;
     --muted-foreground: 0 0% 60%;
-    --accent: 0 0% 18%;
+    --accent: 0 0% 15%;
     --accent-foreground: 40 20% 95%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
     --ring: 40 20% 95%;
+    --gold: 38 50% 58%;
+    --charcoal: 0 0% 75%;
   }
 }
 
@@ -94,6 +99,11 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
   }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
 }
 
 @layer utilities {
@@ -102,5 +112,54 @@
   }
   .font-sans {
     font-family: var(--font-sans);
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .line-accent {
+    @apply relative;
+  }
+  .line-accent::before {
+    content: '';
+    @apply absolute left-0 top-0 w-[3px] h-full;
+    background: hsl(var(--gold));
+  }
+
+  .text-reveal {
+    clip-path: inset(0 100% 0 0);
+    animation: text-reveal 0.8s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  }
+
+  @keyframes text-reveal {
+    to {
+      clip-path: inset(0 0% 0 0);
+    }
+  }
+
+  .img-overlay {
+    @apply relative overflow-hidden;
+  }
+  .img-overlay::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(180deg, transparent 40%, hsl(var(--primary) / 0.6) 100%);
+  }
+
+  .editorial-line {
+    @apply relative pb-8 mb-8;
+  }
+  .editorial-line::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-px bg-border;
+    width: 80px;
+  }
+
+  .glass-card {
+    background: hsl(var(--background) / 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border) / 0.5);
   }
 }
