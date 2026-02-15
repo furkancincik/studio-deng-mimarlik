@@ -12,17 +12,17 @@ const BlogPost = () => {
       <article className="py-24 md:py-32">
         <div className="container mx-auto px-6 md:px-12 max-w-3xl">
           <Link to="/blog" className="text-sm text-muted-foreground font-sans hover:text-foreground transition-colors mb-8 inline-block">
-            ← Back to Blog
+            ← Blog'a Dön
           </Link>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mt-8">
-            <p className="text-xs text-muted-foreground font-sans mb-4">{post.date || "Date"} — {post.author || "Author"}</p>
+            <p className="text-xs text-muted-foreground font-sans mb-4">{post.date || "Tarih"} — {post.author || "Yazar"}</p>
             <h1 className="text-3xl md:text-5xl font-serif font-medium text-foreground mb-8 leading-tight">
-              {post.title || "Blog Post Title"}
+              {post.title || "Yazı Başlığı"}
             </h1>
 
             <div className="aspect-[16/9] bg-secondary mb-12 flex items-center justify-center">
-              <span className="text-muted-foreground text-sm font-sans">Featured image placeholder</span>
+              <span className="text-muted-foreground text-sm font-sans">Öne çıkan görsel alanı</span>
             </div>
 
             <div className="space-y-4">
@@ -32,7 +32,7 @@ const BlogPost = () => {
             </div>
 
             <div className="mt-8 flex gap-2">
-              {(post.tags.length > 0 ? post.tags : ["Tag 1", "Tag 2"]).map((tag) => (
+              {["Etiket 1", "Etiket 2"].map((tag) => (
                 <span key={tag} className="text-xs bg-secondary text-muted-foreground px-3 py-1 font-sans">
                   {tag}
                 </span>

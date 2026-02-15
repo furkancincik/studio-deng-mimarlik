@@ -15,7 +15,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // CMS integration placeholder
   };
 
   const inputClasses =
@@ -26,11 +25,10 @@ const Contact = () => {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <SectionHeading label="Contact" title="Get in Touch" subtitle="Content will be added here" />
+            <SectionHeading label="İletişim" title="Bize Ulaşın" subtitle="İçerik buraya eklenecek" />
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-8">
-            {/* Form */}
             <motion.form
               onSubmit={handleSubmit}
               initial={{ opacity: 0, y: 20 }}
@@ -41,14 +39,14 @@ const Contact = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <input
                   type="text"
-                  placeholder="Name"
+                  placeholder="Ad"
                   className={inputClasses}
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
                 <input
                   type="text"
-                  placeholder="Surname"
+                  placeholder="Soyad"
                   className={inputClasses}
                   value={form.surname}
                   onChange={(e) => setForm({ ...form, surname: e.target.value })}
@@ -56,20 +54,20 @@ const Contact = () => {
               </div>
               <input
                 type="email"
-                placeholder="Email"
+                placeholder="E-posta"
                 className={inputClasses}
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
               />
               <input
                 type="tel"
-                placeholder="Phone"
+                placeholder="Telefon"
                 className={inputClasses}
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
               />
               <textarea
-                placeholder="Message"
+                placeholder="Mesajınız"
                 rows={4}
                 className={`${inputClasses} resize-none`}
                 value={form.message}
@@ -79,17 +77,16 @@ const Contact = () => {
                 type="submit"
                 className="bg-primary text-primary-foreground px-10 py-3 text-sm font-sans tracking-wide hover:opacity-90 transition-opacity"
               >
-                Send Message
+                Mesaj Gönder
               </button>
             </motion.form>
 
-            {/* Info + Map */}
             <div className="space-y-8">
               <div className="space-y-6">
                 {[
-                  { label: "Address", value: "Address will be added here" },
-                  { label: "Phone", value: "Phone will be added here" },
-                  { label: "Email", value: "Email will be added here" },
+                  { label: "Adres", value: "Adres buraya eklenecek" },
+                  { label: "Telefon", value: "Telefon buraya eklenecek" },
+                  { label: "E-posta", value: "E-posta buraya eklenecek" },
                 ].map((item) => (
                   <div key={item.label}>
                     <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-sans mb-1">{item.label}</p>
@@ -98,7 +95,7 @@ const Contact = () => {
                 ))}
 
                 <div>
-                  <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-sans mb-2">Social</p>
+                  <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground font-sans mb-2">Sosyal Medya</p>
                   <div className="flex gap-4">
                     {["Instagram", "LinkedIn", "Twitter"].map((s) => (
                       <a key={s} href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors font-sans">
@@ -109,9 +106,8 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
               <div className="aspect-[4/3] bg-secondary flex items-center justify-center">
-                <span className="text-muted-foreground text-sm font-sans">Map placeholder</span>
+                <span className="text-muted-foreground text-sm font-sans">Harita alanı</span>
               </div>
             </div>
           </div>

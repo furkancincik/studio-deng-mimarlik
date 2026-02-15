@@ -16,7 +16,7 @@ const Index = () => {
       {/* Hero */}
       <section className="relative h-[85vh] md:h-[90vh] bg-secondary flex items-end">
         <div className="absolute inset-0 bg-muted flex items-center justify-center">
-          <span className="text-muted-foreground font-sans text-sm">Hero image placeholder</span>
+          <span className="text-muted-foreground font-sans text-sm">Ana görsel alanı</span>
         </div>
         <div className="relative z-10 container mx-auto px-6 md:px-12 pb-16 md:pb-24">
           <motion.div
@@ -26,27 +26,27 @@ const Index = () => {
             className="max-w-2xl"
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-foreground leading-[1.1] mb-4">
-              Headline placeholder
+              Başlık alanı
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground font-sans mb-8">
-              Slogan will be added here
+              Slogan buraya eklenecek
             </p>
             <Link
               to="/projects"
               className="inline-block bg-primary text-primary-foreground px-8 py-3 text-sm font-sans tracking-wide hover:opacity-90 transition-opacity"
             >
-              View Projects
+              Projeleri İncele
             </Link>
           </motion.div>
         </div>
       </section>
 
-      {/* About Preview */}
+      {/* Hakkımızda Önizleme */}
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <SectionHeading label="About" title="Studio Introduction" subtitle="Content will be added here" />
+              <SectionHeading label="Hakkımızda" title="Stüdyo Tanıtımı" subtitle="İçerik buraya eklenecek" />
               <div className="space-y-4">
                 <div className="h-4 w-full bg-muted rounded" />
                 <div className="h-4 w-5/6 bg-muted rounded" />
@@ -56,7 +56,7 @@ const Index = () => {
                 to="/about"
                 className="inline-block mt-8 text-sm font-sans tracking-wide text-foreground border-b border-foreground pb-1 hover:opacity-70 transition-opacity"
               >
-                Learn More
+                Daha Fazla
               </Link>
             </div>
             <motion.div
@@ -66,16 +66,16 @@ const Index = () => {
               transition={{ duration: 0.8 }}
               className="aspect-[4/3] bg-secondary flex items-center justify-center"
             >
-              <span className="text-muted-foreground text-sm font-sans">Image placeholder</span>
+              <span className="text-muted-foreground text-sm font-sans">Görsel alanı</span>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Completed Projects */}
+      {/* Tamamlanan Projeler */}
       <section className="py-24 md:py-32 bg-warm-cream">
         <div className="container mx-auto px-6 md:px-12">
-          <SectionHeading label="Portfolio" title="Selected Projects" subtitle="Content will be added here" />
+          <SectionHeading label="Portfolyo" title="Seçili Projeler" subtitle="İçerik buraya eklenecek" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {completedProjects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
@@ -86,16 +86,16 @@ const Index = () => {
               to="/projects"
               className="inline-block text-sm font-sans tracking-wide text-foreground border-b border-foreground pb-1 hover:opacity-70 transition-opacity"
             >
-              View All Projects
+              Tüm Projeleri Gör
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Ongoing Projects */}
+      {/* Devam Eden Projeler */}
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 md:px-12">
-          <SectionHeading label="In Progress" title="Ongoing Projects" subtitle="Content will be added here" />
+          <SectionHeading label="Devam Eden" title="Süren Projeler" subtitle="İçerik buraya eklenecek" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {ongoingProjects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
@@ -104,10 +104,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Ekip */}
       <section className="py-24 md:py-32 bg-secondary">
         <div className="container mx-auto px-6 md:px-12">
-          <SectionHeading label="People" title="Our Team" subtitle="Content will be added here" />
+          <SectionHeading label="Ekibimiz" title="Takımımız" subtitle="İçerik buraya eklenecek" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredTeam.map((member, i) => (
               <TeamCard key={member.id} member={member} index={i} />
@@ -118,7 +118,7 @@ const Index = () => {
               to="/team"
               className="inline-block text-sm font-sans tracking-wide text-foreground border-b border-foreground pb-1 hover:opacity-70 transition-opacity"
             >
-              Meet the Team
+              Ekibi Tanıyın
             </Link>
           </div>
         </div>
@@ -135,16 +135,16 @@ const Index = () => {
             className="max-w-2xl mx-auto space-y-6"
           >
             <h2 className="text-3xl md:text-5xl font-serif font-medium text-foreground">
-              CTA headline placeholder
+              Çağrı başlığı alanı
             </h2>
             <p className="text-muted-foreground font-sans text-lg">
-              Content will be added here
+              İçerik buraya eklenecek
             </p>
             <Link
               to="/contact"
               className="inline-block bg-primary text-primary-foreground px-10 py-4 text-sm font-sans tracking-wide hover:opacity-90 transition-opacity"
             >
-              Get in Touch
+              Bize Ulaşın
             </Link>
           </motion.div>
         </div>

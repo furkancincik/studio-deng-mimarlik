@@ -15,9 +15,9 @@ const Projects = () => {
   });
 
   const filters = [
-    { key: "all" as const, label: "All" },
-    { key: "completed" as const, label: "Completed" },
-    { key: "ongoing" as const, label: "Ongoing" },
+    { key: "all" as const, label: "Tümü" },
+    { key: "completed" as const, label: "Tamamlanan" },
+    { key: "ongoing" as const, label: "Devam Eden" },
   ];
 
   return (
@@ -25,7 +25,7 @@ const Projects = () => {
       <section className="py-24 md:py-32">
         <div className="container mx-auto px-6 md:px-12">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <SectionHeading label="Portfolio" title="Projects" subtitle="Content will be added here" />
+            <SectionHeading label="Portfolyo" title="Projeler" subtitle="İçerik buraya eklenecek" />
           </motion.div>
 
           <div className="flex gap-6 mb-12">
