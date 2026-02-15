@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import DengLogo from "./DengLogo";
 
 const navItems = [
   { label: "Hakkımızda", path: "/about" },
@@ -32,10 +33,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-20">
         <Link to="/" className="relative group">
-          <span className="font-display text-xl md:text-2xl font-bold tracking-[-0.02em] text-foreground">
-            STUDIO
-          </span>
-          <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-gold transition-all duration-300 group-hover:w-full" />
+          <DengLogo size="sm" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
