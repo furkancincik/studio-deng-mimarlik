@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const navItems = [
-  { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
-  { label: "Mission & Vision", path: "/mission" },
-  { label: "Projects", path: "/projects" },
-  { label: "Team", path: "/team" },
+  { label: "Ana Sayfa", path: "/" },
+  { label: "Hakkımızda", path: "/about" },
+  { label: "Misyon & Vizyon", path: "/mission" },
+  { label: "Projeler", path: "/projects" },
+  { label: "Ekip", path: "/team" },
   { label: "Blog", path: "/blog" },
-  { label: "Contact", path: "/contact" },
+  { label: "İletişim", path: "/contact" },
 ];
 
 const Navbar = () => {
@@ -24,7 +24,6 @@ const Navbar = () => {
           STUDIO
         </Link>
 
-        {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
@@ -39,17 +38,15 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden text-foreground"
-          aria-label="Toggle menu"
+          aria-label="Menüyü aç/kapat"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

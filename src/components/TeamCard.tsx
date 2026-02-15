@@ -18,18 +18,18 @@ const TeamCard = ({ member, index = 0 }: TeamCardProps) => {
       <Link to={`/team/${member.id}`} className="group block">
         <div className="aspect-[3/4] bg-secondary mb-4 overflow-hidden">
           <div className="w-full h-full bg-muted group-hover:scale-105 transition-transform duration-700 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm font-sans">Photo</span>
+            <span className="text-muted-foreground text-sm font-sans">Fotoğraf</span>
           </div>
         </div>
         <div className="space-y-1">
           <h3 className="text-lg font-serif font-medium text-foreground">
-            {member.name || "Team Member Name"}
+            {member.name || "İsim Soyisim"}
           </h3>
           <p className="text-sm text-muted-foreground font-sans">
-            {member.title || "Title"}
+            {member.title || "Ünvan"}
           </p>
           <p className="text-xs text-muted-foreground font-sans">
-            {member.expertise || "Area of expertise"}
+            {member.expertise || "Uzmanlık alanı"}
           </p>
         </div>
       </Link>
