@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
 import TeamCard from "@/components/TeamCard";
+import DengLogo from "@/components/DengLogo";
 import { placeholderProjects, placeholderTeam } from "@/data/placeholder";
 import { useRef } from "react";
 
@@ -38,24 +39,17 @@ const Index = () => {
         >
           <div className="max-w-3xl">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <span className="text-[11px] tracking-[0.4em] uppercase text-primary-foreground/60 font-display block mb-5">
-                Mimari Stüdyo
-              </span>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-medium text-primary-foreground leading-[1.05] mb-6">
-                Başlık
-                <br />
-                <span className="italic font-normal">alanı</span>
-              </h1>
+              <DengLogo animated size="hero" light />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex items-center gap-8"
+              transition={{ duration: 0.8, delay: 2.8 }}
+              className="flex items-center gap-8 mt-8"
             >
               <Link
                 to="/projects"

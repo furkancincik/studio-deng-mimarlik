@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import DengLogo from "./DengLogo";
 
 const Footer = () => {
   return (
@@ -27,7 +28,7 @@ const Footer = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           <div className="space-y-4 lg:col-span-1">
-            <h3 className="font-display text-2xl font-bold tracking-[-0.02em]">STUDIO</h3>
+            <DengLogo size="md" light />
             <p className="text-sm opacity-50 font-sans leading-relaxed max-w-xs">
               İçerik buraya eklenecek
             </p>
@@ -82,7 +83,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs opacity-40 font-sans">© {new Date().getFullYear()} Studio. Tüm hakları saklıdır.</p>
+          <p className="text-xs opacity-40 font-sans">© {new Date().getFullYear()} Deng Mimarlık. Tüm hakları saklıdır.</p>
           <div className="flex gap-6">
             <a href="#" className="text-xs opacity-40 hover:opacity-100 transition-opacity font-sans">Gizlilik Politikası</a>
             <a href="#" className="text-xs opacity-40 hover:opacity-100 transition-opacity font-sans">Kullanım Koşulları</a>
