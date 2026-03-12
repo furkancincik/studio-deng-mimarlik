@@ -130,9 +130,9 @@ const DengLogo = ({ animated = false, size = "md", light = false, className = ""
         />
       </div>
 
-      {/* Mimarlık subtitle */}
+      {/* Mimarlık subtitle with terracotta accent */}
       <motion.span
-        className={`font-display font-medium ${s.mimarlik} ${s.tracking} uppercase ${light ? "text-primary-foreground/50" : "text-muted-foreground"} leading-none`}
+        className={`font-display font-medium ${s.mimarlik} ${s.tracking} uppercase ${light ? "text-terracotta-light" : "text-terracotta"} leading-none`}
         initial={{ opacity: 0, letterSpacing: "0.8em" }}
         animate={{ opacity: 1, letterSpacing: s.tracking.includes("0.5") ? "0.5em" : s.tracking.includes("0.45") ? "0.45em" : s.tracking.includes("0.4") ? "0.4em" : "0.35em" }}
         transition={{ duration: 1, delay: 2, ease: [0.25, 0.46, 0.45, 0.94] }}
