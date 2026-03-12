@@ -102,7 +102,7 @@ const Index = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="text-center md:text-left"
               >
-                <p className="text-3xl md:text-4xl font-serif font-medium text-gold">{stat.number}</p>
+                <p className="text-3xl md:text-4xl font-serif font-medium text-terracotta">{stat.number}</p>
                 <p className="text-[11px] tracking-[0.2em] uppercase opacity-50 font-display mt-1">{stat.label}</p>
               </motion.div>
             ))}
