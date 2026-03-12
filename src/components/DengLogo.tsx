@@ -27,7 +27,7 @@ const DengLogo = ({ animated = false, size = "md", light = false, className = ""
           </span>
           {/* Architectural cut line through the D */}
           <div
-            className={`absolute top-1/2 left-0 h-px ${light ? "bg-gold/60" : "bg-gold/80"}`}
+            className={`absolute top-1/2 left-0 h-[3px] ${light ? "bg-terracotta/70" : "bg-terracotta"}`}
             style={{ width: "0.6em" }}
           />
         </div>
