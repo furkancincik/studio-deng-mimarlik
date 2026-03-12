@@ -16,10 +16,18 @@ const TeamCard = ({ member, index = 0 }: TeamCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       <Link to={`/team/${member.id}`} className="group block">
-        <div className="aspect-[3/4] bg-secondary mb-4 overflow-hidden">
-          <div className="w-full h-full bg-muted group-hover:scale-105 transition-transform duration-700 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm font-sans">Fotoğraf</span>
-          </div>
+        <div className="aspect-[3/4] bg-secondary mb-4 overflow-hidden rounded-lg">
+          {member.photo ? (
+            <img
+              src={member.photo}
+              alt={member.name}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          ) : (
+            <div className="w-full h-full bg-muted group-hover:scale-105 transition-transform duration-700 flex items-center justify-center">
+              <span className="text-muted-foreground text-sm font-sans">Fotoğraf</span>
+            </div>
+          )}
         </div>
         <div className="space-y-1">
           <h3 className="text-lg font-serif font-medium text-foreground">
