@@ -241,7 +241,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display font-medium block mb-6">
+            <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta font-display font-medium block mb-6">
               İletişim
             </span>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-foreground leading-[1.1] mb-6">
