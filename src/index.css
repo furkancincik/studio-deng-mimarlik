@@ -135,15 +135,25 @@
 }
 
 @layer components {
+  /* Canlı renkli vurgu çizgileri */
   .line-accent {
     @apply relative;
   }
   .line-accent::before {
     content: '';
-    @apply absolute left-0 top-0 w-[3px] h-full;
-    background: hsl(var(--gold));
+    @apply absolute left-0 top-0 w-[4px] h-full rounded-full;
+    background: linear-gradient(180deg, hsl(var(--terracotta)), hsl(var(--ochre)));
   }
 
+  .line-accent-olive::before {
+    background: linear-gradient(180deg, hsl(var(--olive)), hsl(var(--sage)));
+  }
+
+  .line-accent-teal::before {
+    background: linear-gradient(180deg, hsl(var(--deep-teal)), hsl(var(--sage)));
+  }
+
+  /* Metin animasyonları */
   .text-reveal {
     clip-path: inset(0 100% 0 0);
     animation: text-reveal 0.8s cubic-bezier(0.77, 0, 0.18, 1) forwards;
@@ -155,27 +165,57 @@
     }
   }
 
+  /* Canlı gradyan overlay */
   .img-overlay {
     @apply relative overflow-hidden;
   }
   .img-overlay::after {
     content: '';
     @apply absolute inset-0;
-    background: linear-gradient(180deg, transparent 40%, hsl(var(--primary) / 0.6) 100%);
+    background: linear-gradient(180deg, transparent 30%, hsl(var(--anthracite) / 0.5) 100%);
   }
 
+  .img-overlay-warm::after {
+    background: linear-gradient(180deg, transparent 40%, hsl(var(--terracotta) / 0.3) 100%);
+  }
+
+  /* Editör çizgisi */
   .editorial-line {
     @apply relative pb-8 mb-8;
   }
   .editorial-line::after {
     content: '';
-    @apply absolute bottom-0 left-0 h-px bg-border;
+    @apply absolute bottom-0 left-0 h-[3px] rounded-full;
     width: 80px;
+    background: linear-gradient(90deg, hsl(var(--terracotta)), hsl(var(--ochre)));
   }
 
+  /* Cam kart efekti */
   .glass-card {
-    background: hsl(var(--background) / 0.7);
+    background: hsl(var(--background) / 0.75);
     backdrop-filter: blur(20px);
-    border: 1px solid hsl(var(--border) / 0.5);
+    border: 1px solid hsl(var(--border) / 0.6);
+  }
+
+  /* Canlı hover efekti */
+  .hover-lift {
+    @apply transition-all duration-500;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px hsl(var(--terracotta) / 0.2);
+  }
+
+  /* Renkli arka planlar */
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, hsl(var(--warm-beige)) 0%, hsl(35 50% 90%) 50%, hsl(25 40% 92%) 100%);
+  }
+
+  .bg-gradient-nature {
+    background: linear-gradient(135deg, hsl(85 20% 92%) 0%, hsl(145 15% 94%) 50%, hsl(38 30% 96%) 100%);
+  }
+
+  .bg-accent-soft {
+    background: linear-gradient(135deg, hsl(var(--terracotta) / 0.08) 0%, hsl(var(--ochre) / 0.05) 100%);
   }
 }
