@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="space-y-4 lg:col-span-1">
             <DengLogo size="md" light />
             <p className="text-sm opacity-50 font-sans leading-relaxed max-w-xs">
-              İçerik buraya eklenecek
+              Çağdaş mimarlık pratiğinde sürdürülebilir, insan odaklı ve estetik değeri yüksek tasarımlar üretiyoruz.
             </p>
           </div>
 
