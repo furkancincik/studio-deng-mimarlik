@@ -53,7 +53,7 @@ const Index = () => {
             >
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-display font-medium tracking-wide hover:bg-gold hover:text-primary-foreground transition-all duration-300"
+                className="group inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-display font-medium tracking-wide hover:bg-terracotta hover:text-primary-foreground transition-all duration-300 rounded-full"
               >
                 Projeleri İncele
                 <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -102,7 +102,7 @@ const Index = () => {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="text-center md:text-left"
               >
-                <p className="text-3xl md:text-4xl font-serif font-medium text-gold">{stat.number}</p>
+                <p className="text-3xl md:text-4xl font-serif font-medium text-terracotta">{stat.number}</p>
                 <p className="text-[11px] tracking-[0.2em] uppercase opacity-50 font-display mt-1">{stat.label}</p>
               </motion.div>
             ))}
@@ -127,7 +127,7 @@ const Index = () => {
               >
                 <span className="relative">
                   Daha Fazla
-                  <span className="absolute bottom-0 left-0 w-full h-px bg-foreground/30 group-hover:bg-gold transition-colors duration-300" />
+                  <span className="absolute bottom-0 left-0 w-full h-[2px] bg-foreground/30 group-hover:bg-terracotta transition-colors duration-300" />
                 </span>
                 <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
@@ -171,7 +171,7 @@ const Index = () => {
             >
               <span className="relative">
                 Tüm Projeleri Gör
-                <span className="absolute bottom-0 left-0 w-full h-px bg-foreground/30 group-hover:bg-gold transition-colors duration-300" />
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-foreground/30 group-hover:bg-terracotta transition-colors duration-300" />
               </span>
               <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
@@ -197,12 +197,12 @@ const Index = () => {
       </section>
 
       {/* Ekip */}
-      <section className="py-28 md:py-40 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <section className="py-28 md:py-40 bg-gradient-to-br from-anthracite via-[hsl(220,20%,18%)] to-[hsl(220,25%,15%)] text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-terracotta via-olive to-teal" />
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-20">
             <div>
-              <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display font-medium block mb-4">
+              <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta-light font-display font-medium block mb-4">
                 Ekibimiz
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-primary-foreground leading-[1.1]">
@@ -218,7 +218,7 @@ const Index = () => {
             >
               <span className="relative">
                 Ekibi Tanıyın
-                <span className="absolute bottom-0 left-0 w-full h-px bg-primary-foreground/30 group-hover:bg-gold transition-colors duration-300" />
+                <span className="absolute bottom-0 left-0 w-full h-[2px] bg-primary-foreground/30 group-hover:bg-terracotta-light transition-colors duration-300" />
               </span>
               <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
@@ -241,7 +241,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl mx-auto"
           >
-            <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display font-medium block mb-6">
+            <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta font-display font-medium block mb-6">
               İletişim
             </span>
             <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-foreground leading-[1.1] mb-6">
@@ -254,7 +254,7 @@ const Index = () => {
             </p>
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-10 py-4 text-sm font-display font-medium tracking-wide hover:bg-gold transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-terracotta to-terracotta-light text-primary-foreground px-10 py-4 text-sm font-display font-medium tracking-wide hover:shadow-lg hover:shadow-terracotta/30 hover:-translate-y-1 transition-all duration-300 rounded-full"
             >
               Bize Ulaşın
               <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

@@ -5,8 +5,14 @@ import DengLogo from "./DengLogo";
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground relative overflow-hidden">
-      {/* Decorative line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      {/* Canlı dekoratif çizgi */}
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-terracotta via-olive to-teal" />
+      
+      {/* Arka plan deseni */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-terracotta/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-olive/20 rounded-full blur-3xl" />
+      </div>
 
       <div className="container mx-auto px-6 md:px-12 py-20 md:py-28">
         {/* Top: Big CTA area */}

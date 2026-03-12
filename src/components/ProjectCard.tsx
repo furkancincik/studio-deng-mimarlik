@@ -31,12 +31,12 @@ const ProjectCard = ({ project, index = 0, featured = false }: ProjectCardProps)
         </div>
         <div className="space-y-1.5">
           <div className="flex items-center gap-3">
-            <p className="text-[11px] tracking-[0.25em] uppercase text-gold font-display font-medium">
+            <p className="text-[11px] tracking-[0.25em] uppercase text-terracotta font-display font-medium">
               {project.category || "Kategori"}
             </p>
             {project.year && (
               <>
-                <span className="w-1 h-1 rounded-full bg-border" />
+                <span className="w-1.5 h-1.5 rounded-full bg-olive/60" />
                 <p className="text-[11px] tracking-[0.2em] uppercase text-muted-foreground font-display">{project.year}</p>
               </>
             )}
@@ -49,9 +49,9 @@ const ProjectCard = ({ project, index = 0, featured = false }: ProjectCardProps)
           </p>
           {project.isOngoing && project.progress !== undefined && (
             <div className="pt-3">
-              <div className="h-[2px] w-full bg-border overflow-hidden">
+              <div className="h-[3px] w-full bg-border/60 overflow-hidden rounded-full">
                 <motion.div
-                  className="h-full bg-gold"
+                  className="h-full bg-gradient-to-r from-terracotta to-ochre"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${project.progress}%` }}
                   viewport={{ once: true }}

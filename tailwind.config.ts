@@ -18,7 +18,7 @@ export default {
         sans: ["'DM Sans'", "system-ui", "sans-serif"],
         display: ["'Space Grotesk'", "system-ui", "sans-serif"],
       },
-      colors: {
+colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -59,8 +59,27 @@ export default {
           cream: "hsl(var(--cream))",
         },
         anthracite: "hsl(var(--anthracite))",
-        gold: "hsl(var(--gold))",
-        charcoal: "hsl(var(--charcoal))",
+        // Canlı yeni renkler
+        terracotta: {
+          DEFAULT: "hsl(var(--terracotta))",
+          light: "hsl(var(--terracotta-light))",
+        },
+        olive: {
+          DEFAULT: "hsl(var(--olive))",
+          light: "hsl(var(--olive-light))",
+        },
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          light: "hsl(var(--sage-light))",
+        },
+        ochre: {
+          DEFAULT: "hsl(var(--ochre))",
+          light: "hsl(var(--ochre-light))",
+        },
+        teal: {
+          DEFAULT: "hsl(var(--deep-teal))",
+          light: "hsl(var(--deep-teal-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

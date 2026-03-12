@@ -49,7 +49,7 @@ const Navbar = () => {
               {location.pathname === item.path && (
                 <motion.span
                   layoutId="nav-indicator"
-                  className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gold"
+                  className="absolute -bottom-1 left-0 right-0 h-[3px] bg-gradient-to-r from-terracotta to-ochre rounded-full"
                   transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                 />
               )}
