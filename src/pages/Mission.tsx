@@ -4,15 +4,34 @@ import SectionHeading from "@/components/SectionHeading";
 
 const Mission = () => {
   const sections = [
-    { label: "Misyon", title: "Misyonumuz", icon: "01" },
-    { label: "Vizyon", title: "Vizyonumuz", icon: "02" },
-    { label: "İlkeler", title: "Temel İlkelerimiz", icon: "03" },
-    { label: "Sürdürülebilirlik", title: "Sürdürülebilirlik Yaklaşımı", icon: "04" },
+    {
+      label: "Misyon",
+      title: "Misyonumuz",
+      icon: "01",
+      text: "İnsanların yaşam kalitesini yükselten, çevreye duyarlı ve estetik değeri yüksek mimari çözümler üretmek. Her projede kullanıcı deneyimini merkeze alarak, işlevsel ve ilham verici mekânlar tasarlamak. Yerel yapı kültürünü çağdaş mimari pratiğiyle buluşturarak, Türkiye'nin mimarlık sahnesine özgün katkılarda bulunmak.",
+    },
+    {
+      label: "Vizyon",
+      title: "Vizyonumuz",
+      icon: "02",
+      text: "Uluslararası ölçekte tanınan, sürdürülebilir tasarım ilkeleriyle hareket eden öncü bir mimarlık stüdyosu olmak. 2030 yılına kadar tüm projelerimizde karbon nötr standartlara ulaşmayı ve mimarlık eğitimine aktif katkıda bulunmayı hedefliyoruz. Tasarımın gücüyle toplumsal değişime katkı sağlamak en büyük vizyonumuzdur.",
+    },
+    {
+      label: "İlkeler",
+      title: "Temel İlkelerimiz",
+      icon: "03",
+      text: "Dürüstlük: Malzeme, yapı ve tasarım sürecinde şeffaflığı esas alırız. İnovasyon: Geleneksel yapı bilgisini teknolojik yeniliklerle harmanlayarak ilerleriz. İş birliği: Müşterilerimiz, mühendisler ve zanaatkârlarla eşit ortaklık anlayışıyla çalışırız. Mükemmeliyet: Her detayda en yüksek kalite standardını hedefleriz.",
+    },
+    {
+      label: "Sürdürülebilirlik",
+      title: "Sürdürülebilirlik Yaklaşımımız",
+      icon: "04",
+      text: "Çevresel sorumluluk, tasarım sürecimizin her aşamasında yer alır. Pasif enerji sistemleri, yeşil çatı uygulamaları, yağmur suyu toplama ve geri dönüştürülmüş malzeme kullanımı projelerimizin standart bileşenleridir. LEED ve BREEAM sertifikasyonlarına uygun projeler geliştiriyor, yapay aydınlatma ihtiyacını minimize eden doğal ışık stratejileri uyguluyoruz.",
+    },
   ];
 
   return (
     <Layout>
-      {/* Hero */}
       <section className="relative h-[50vh] md:h-[60vh] bg-primary flex items-end overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 right-1/4 w-64 h-64 border border-primary-foreground/20 rounded-full" />
@@ -20,7 +39,7 @@ const Mission = () => {
         </div>
         <div className="relative z-10 container mx-auto px-6 md:px-12 pb-16 md:pb-24">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display block mb-4">Amaç</span>
+            <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta-light font-display block mb-4">Amaç</span>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium text-primary-foreground leading-[1.05]">
               Misyon <span className="italic font-normal">&</span> Vizyon
             </h1>
@@ -38,15 +57,13 @@ const Mission = () => {
                 viewport={{ once: true }}
                 className="lg:col-span-2"
               >
-                <span className="text-6xl md:text-8xl font-serif font-medium text-gold/30">{section.icon}</span>
+                <span className="text-6xl md:text-8xl font-serif font-medium text-terracotta/30">{section.icon}</span>
               </motion.div>
               <div className="lg:col-span-6">
-                <SectionHeading label={section.label} title={section.title} subtitle="İçerik buraya eklenecek" />
-                <div className="space-y-3 max-w-lg">
-                  {Array.from({ length: 3 }).map((_, j) => (
-                    <div key={j} className="h-4 bg-muted rounded" style={{ width: `${90 - j * 15}%` }} />
-                  ))}
-                </div>
+                <SectionHeading label={section.label} title={section.title} />
+                <p className="text-muted-foreground font-sans text-sm leading-relaxed max-w-lg">
+                  {section.text}
+                </p>
               </div>
             </div>
           </div>

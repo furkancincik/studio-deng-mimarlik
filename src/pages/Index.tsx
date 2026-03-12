@@ -8,6 +8,8 @@ import TeamCard from "@/components/TeamCard";
 import DengLogo from "@/components/DengLogo";
 import { placeholderProjects, placeholderTeam } from "@/data/placeholder";
 import { useRef } from "react";
+import heroImg from "@/assets/hero-main.jpg";
+import aboutImg from "@/assets/about-studio.jpg";
 
 const Index = () => {
   const completedProjects = placeholderProjects.filter((p) => !p.isOngoing).slice(0, 3);
@@ -27,11 +29,10 @@ const Index = () => {
     <Layout>
       {/* Hero */}
       <section ref={heroRef} className="relative h-screen overflow-hidden">
-        <motion.div style={{ scale: heroScale }} className="absolute inset-0 bg-muted flex items-center justify-center">
-          <span className="text-muted-foreground font-sans text-sm">Ana görsel alanı</span>
+        <motion.div style={{ scale: heroScale }} className="absolute inset-0">
+          <img src={heroImg} alt="Deng Mimarlık - Modern mimari tasarım" className="w-full h-full object-cover" />
         </motion.div>
-        {/* Dark gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
 
         <motion.div
           style={{ opacity: heroOpacity, y: heroTextY }}
@@ -59,12 +60,11 @@ const Index = () => {
                 <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
               <p className="hidden md:block text-primary-foreground/60 font-sans text-base max-w-xs">
-                Slogan buraya eklenecek
+                Mekânı düşünür, yapıyı tasarlarız.
               </p>
             </motion.div>
           </div>
 
-          {/* Scroll indicator */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -74,10 +74,7 @@ const Index = () => {
             <span className="text-[10px] tracking-[0.3em] uppercase text-primary-foreground/40 font-display rotate-90 origin-center mb-6">
               Keşfet
             </span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            >
+            <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 2, repeat: Infinity }}>
               <ArrowDown size={16} className="text-primary-foreground/40" />
             </motion.div>
           </motion.div>
@@ -89,10 +86,10 @@ const Index = () => {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
             {[
-              { number: "—", label: "Tamamlanan Proje" },
-              { number: "—", label: "Yıllık Deneyim" },
-              { number: "—", label: "Ekip Üyesi" },
-              { number: "—", label: "Ödül" },
+              { number: "47+", label: "Tamamlanan Proje" },
+              { number: "12", label: "Yıllık Deneyim" },
+              { number: "18", label: "Ekip Üyesi" },
+              { number: "9", label: "Uluslararası Ödül" },
             ].map((stat, i) => (
               <motion.div
                 key={stat.label}
@@ -115,12 +112,13 @@ const Index = () => {
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             <div className="lg:col-span-5 lg:pr-8">
-              <SectionHeading label="Hakkımızda" title="Stüdyo Tanıtımı" subtitle="İçerik buraya eklenecek" />
-              <div className="space-y-3 mb-8">
-                <div className="h-4 w-full bg-muted rounded" />
-                <div className="h-4 w-5/6 bg-muted rounded" />
-                <div className="h-4 w-4/6 bg-muted rounded" />
-              </div>
+              <SectionHeading label="Hakkımızda" title="Tasarımın Gücüne İnanıyoruz" subtitle="Deng Mimarlık, 2014 yılından bu yana çağdaş mimari çözümler üreten, ödüllü bir tasarım stüdyosudur." />
+              <p className="text-muted-foreground font-sans text-sm leading-relaxed mb-8">
+                İstanbul merkezli ofisimizde konut, ticari, kültürel ve konaklama projelerinde
+                sürdürülebilir ve insan odaklı tasarımlar geliştiriyoruz. Her projede mekânsal
+                deneyimi ve malzeme duyarlılığını ön planda tutarak, yaşanabilir ve ilham verici
+                yapılar ortaya koyuyoruz.
+              </p>
               <Link
                 to="/about"
                 className="group inline-flex items-center gap-2 text-sm font-display font-medium tracking-wide text-foreground"
@@ -139,18 +137,18 @@ const Index = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="col-span-7 aspect-[3/4] bg-secondary flex items-center justify-center"
+                  className="col-span-7 aspect-[3/4] overflow-hidden"
                 >
-                  <span className="text-muted-foreground text-sm font-sans">Görsel alanı</span>
+                  <img src={aboutImg} alt="Deng Mimarlık stüdyo" className="w-full h-full object-cover" />
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7, delay: 0.15 }}
-                  className="col-span-5 aspect-[3/4] bg-muted flex items-center justify-center mt-12"
+                  className="col-span-5 aspect-[3/4] overflow-hidden mt-12"
                 >
-                  <span className="text-muted-foreground text-sm font-sans">Görsel alanı</span>
+                  <img src={completedProjects[2]?.images[0] || ""} alt="Mimari proje" className="w-full h-full object-cover" />
                 </motion.div>
               </div>
             </div>
@@ -160,11 +158,10 @@ const Index = () => {
 
       {/* Tamamlanan Projeler */}
       <section className="py-28 md:py-40 bg-warm-cream relative">
-        {/* Decorative line */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-20">
-            <SectionHeading label="Portfolyo" title="Seçili Projeler" subtitle="İçerik buraya eklenecek" />
+            <SectionHeading label="Portfolyo" title="Seçili Projeler" subtitle="Tasarım vizyonumuzu yansıtan öne çıkan projelerimiz." />
             <Link
               to="/projects"
               className="group inline-flex items-center gap-2 text-sm font-display font-medium tracking-wide text-foreground mb-14 md:mb-20"
@@ -187,7 +184,7 @@ const Index = () => {
       {/* Devam Eden Projeler */}
       <section className="py-28 md:py-40">
         <div className="container mx-auto px-6 md:px-12">
-          <SectionHeading label="Devam Eden" title="Süren Projeler" subtitle="İçerik buraya eklenecek" />
+          <SectionHeading label="Devam Eden" title="Süren Projeler" subtitle="Yapım aşamasındaki projelerimizi takip edin." />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {ongoingProjects.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
@@ -209,7 +206,7 @@ const Index = () => {
                 Takımımız
               </h2>
               <p className="text-primary-foreground/50 max-w-xl text-base md:text-lg leading-relaxed font-sans mt-4">
-                İçerik buraya eklenecek
+                Deneyimli mimarlar ve tasarımcılardan oluşan tutkulu ekibimiz.
               </p>
             </div>
             <Link
@@ -250,7 +247,7 @@ const Index = () => {
               <span className="italic font-normal">geçirelim</span>
             </h2>
             <p className="text-muted-foreground font-sans text-lg mb-10 max-w-lg mx-auto">
-              İçerik buraya eklenecek
+              Hayalinizdeki mekânı birlikte tasarlayalım. Projeleriniz için bizimle iletişime geçin.
             </p>
             <Link
               to="/contact"
