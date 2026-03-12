@@ -59,6 +59,7 @@ colors: {
           cream: "hsl(var(--cream))",
         },
         anthracite: "hsl(var(--anthracite))",
+        gold: "hsl(var(--terracotta))",
         // Canlı yeni renkler
         terracotta: {
           DEFAULT: "hsl(var(--terracotta))",
