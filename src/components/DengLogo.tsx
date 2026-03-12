@@ -46,11 +46,11 @@ const DengLogo = ({ animated = false, size = "md", light = false, className = ""
     <div className={`flex flex-col ${s.gap} ${className}`}>
       {/* Grid lines — blueprint scaffolding */}
       <div className="relative">
-        {/* Horizontal grid lines */}
+        {/* Horizontal grid lines with warm color */}
         {[0, 33, 66, 100].map((pos, i) => (
           <motion.div
             key={`h-${i}`}
-            className="absolute left-0 right-0 h-px bg-gold/15"
+            className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-terracotta/20 via-olive/20 to-teal/20 rounded-full"
             style={{ top: `${pos}%` }}
             initial={{ scaleX: 0, originX: 0 }}
             animate={{ scaleX: [0, 1, 1, 0] }}
@@ -63,11 +63,11 @@ const DengLogo = ({ animated = false, size = "md", light = false, className = ""
           />
         ))}
 
-        {/* Vertical structural lines */}
+        {/* Vertical structural lines with gradient */}
         {[0, 25, 50, 75, 100].map((pos, i) => (
           <motion.div
             key={`v-${i}`}
-            className="absolute top-0 bottom-0 w-px bg-gold/10"
+            className="absolute top-0 bottom-0 w-[2px] bg-gradient-to-b from-terracotta/15 via-olive/15 to-teal/15 rounded-full"
             style={{ left: `${pos}%` }}
             initial={{ scaleY: 0, originY: 0 }}
             animate={{ scaleY: [0, 1, 1, 0] }}
