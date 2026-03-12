@@ -202,7 +202,7 @@ const Index = () => {
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-20">
             <div>
-              <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display font-medium block mb-4">
+              <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta-light font-display font-medium block mb-4">
                 Ekibimiz
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-primary-foreground leading-[1.1]">
