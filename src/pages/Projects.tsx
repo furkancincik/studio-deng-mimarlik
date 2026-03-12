@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Layout from "@/components/Layout";
-import SectionHeading from "@/components/SectionHeading";
 import ProjectCard from "@/components/ProjectCard";
 import { placeholderProjects } from "@/data/placeholder";
+import heroImg from "@/assets/hero-main.jpg";
 
 const Projects = () => {
   const [filter, setFilter] = useState<"all" | "completed" | "ongoing">("all");
@@ -22,10 +22,9 @@ const Projects = () => {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative h-[50vh] md:h-[60vh] bg-primary flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-muted flex items-center justify-center">
-          <span className="text-muted-foreground font-sans text-sm">Görsel alanı</span>
+      <section className="relative h-[50vh] md:h-[60vh] flex items-end overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroImg} alt="Deng Mimarlık projeleri" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/20 to-transparent" />
         <div className="relative z-10 container mx-auto px-6 md:px-12 pb-16 md:pb-24">
@@ -42,7 +41,6 @@ const Projects = () => {
 
       <section className="py-28 md:py-36">
         <div className="container mx-auto px-6 md:px-12">
-          {/* Filters */}
           <div className="flex gap-8 mb-16 border-b border-border pb-4">
             {filters.map((f) => (
               <button
@@ -56,7 +54,7 @@ const Projects = () => {
                 {filter === f.key && (
                   <motion.span
                     layoutId="filter-indicator"
-                    className="absolute bottom-0 left-0 right-0 h-[2px] bg-gold"
+                    className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-terracotta to-ochre rounded-full"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                   />
                 )}
