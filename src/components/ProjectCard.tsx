@@ -18,14 +18,20 @@ const ProjectCard = ({ project, index = 0, featured = false }: ProjectCardProps)
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
       <Link to={`/projects/${project.id}`} className="group block">
-        <div className={`relative overflow-hidden ${featured ? "aspect-[3/4]" : "aspect-[4/3]"} mb-5`}>
-          <div className="w-full h-full bg-secondary transition-transform duration-[800ms] ease-out group-hover:scale-110 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm font-sans">Görsel alanı</span>
-          </div>
-          {/* Overlay on hover */}
+        <div className={`relative overflow-hidden ${featured ? "aspect-[3/4]" : "aspect-[4/3]"} mb-5 rounded-lg`}>
+          {project.images[0] ? (
+            <img
+              src={project.images[0]}
+              alt={project.name}
+              className="w-full h-full object-cover transition-transform duration-[800ms] ease-out group-hover:scale-110"
+            />
+          ) : (
+            <div className="w-full h-full bg-secondary transition-transform duration-[800ms] ease-out group-hover:scale-110 flex items-center justify-center">
+              <span className="text-muted-foreground text-sm font-sans">Görsel alanı</span>
+            </div>
+          )}
           <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/20 transition-all duration-500" />
-          {/* Arrow indicator */}
-          <div className="absolute bottom-4 right-4 w-10 h-10 bg-background/90 backdrop-blur flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+          <div className="absolute bottom-4 right-4 w-10 h-10 bg-background/90 backdrop-blur flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 rounded-full">
             <ArrowUpRight size={18} className="text-foreground" />
           </div>
         </div>
