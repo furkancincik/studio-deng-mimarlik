@@ -22,7 +22,7 @@ const SectionHeading = ({ label, title, subtitle, align = "left", children, larg
       className={`flex flex-col gap-4 mb-14 md:mb-20 ${alignment}`}
     >
       {label && (
-        <span className="text-[11px] tracking-[0.35em] uppercase text-gold font-display font-medium">
+        <span className="text-[11px] tracking-[0.35em] uppercase text-terracotta font-display font-medium">
           {label}
         </span>
       )}

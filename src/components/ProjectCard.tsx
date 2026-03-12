@@ -49,9 +49,9 @@ const ProjectCard = ({ project, index = 0, featured = false }: ProjectCardProps)
           </p>
           {project.isOngoing && project.progress !== undefined && (
             <div className="pt-3">
-              <div className="h-[2px] w-full bg-border overflow-hidden">
+              <div className="h-[3px] w-full bg-border/60 overflow-hidden rounded-full">
                 <motion.div
-                  className="h-full bg-gold"
+                  className="h-full bg-gradient-to-r from-terracotta to-ochre"
                   initial={{ width: 0 }}
                   whileInView={{ width: `${project.progress}%` }}
                   viewport={{ once: true }}

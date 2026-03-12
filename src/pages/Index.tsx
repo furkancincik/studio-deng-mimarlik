@@ -254,7 +254,7 @@ const Index = () => {
             </p>
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-2 bg-primary text-primary-foreground px-10 py-4 text-sm font-display font-medium tracking-wide hover:bg-gold transition-all duration-300"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-terracotta to-terracotta-light text-primary-foreground px-10 py-4 text-sm font-display font-medium tracking-wide hover:shadow-lg hover:shadow-terracotta/30 hover:-translate-y-1 transition-all duration-300 rounded-full"
             >
               Bize Ulaşın
               <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
