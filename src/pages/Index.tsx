@@ -197,8 +197,8 @@ const Index = () => {
       </section>
 
       {/* Ekip */}
-      <section className="py-28 md:py-40 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent" />
+      <section className="py-28 md:py-40 bg-gradient-to-br from-anthracite via-[hsl(220,20%,18%)] to-[hsl(220,25%,15%)] text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-terracotta via-olive to-teal" />
         <div className="container mx-auto px-6 md:px-12">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-20">
             <div>
