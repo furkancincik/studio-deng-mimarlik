@@ -31,7 +31,7 @@ const DengLogo = ({ animated = false, size = "md", light = false, className = ""
             style={{ width: "0.6em" }}
           />
         </div>
-        <span className={`font-display font-medium ${s.mimarlik} ${s.tracking} uppercase ${light ? "text-primary-foreground/50" : "text-muted-foreground"} leading-none`}>
+        <span className={`font-display font-medium ${s.mimarlik} ${s.tracking} uppercase ${light ? "text-terracotta-light" : "text-terracotta"} leading-none`}>
           Mimarlık
         </span>
       </div>
