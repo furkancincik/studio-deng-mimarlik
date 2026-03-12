@@ -65,9 +65,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-xs tracking-[0.3em] uppercase opacity-40 font-display">İletişim</h4>
             <div className="space-y-3 text-sm opacity-60 font-sans">
-              <p>Adres buraya eklenecek</p>
-              <p>Telefon buraya eklenecek</p>
-              <p>E-posta buraya eklenecek</p>
+              <p>Levent Mah. Cömert Sk. No:12/A<br />34340 Beşiktaş, İstanbul</p>
+              <p>+90 (212) 284 56 78</p>
+              <p>info@dengmimarlik.com</p>
             </div>
           </div>
 
