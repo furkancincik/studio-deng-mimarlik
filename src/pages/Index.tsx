@@ -53,7 +53,7 @@ const Index = () => {
             >
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-display font-medium tracking-wide hover:bg-gold hover:text-primary-foreground transition-all duration-300"
+                className="group inline-flex items-center gap-2 bg-primary-foreground text-primary px-8 py-4 text-sm font-display font-medium tracking-wide hover:bg-terracotta hover:text-primary-foreground transition-all duration-300 rounded-full"
               >
                 Projeleri İncele
                 <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
